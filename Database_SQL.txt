@@ -2,3 +2,17 @@
 SELECT Person.firstname , Person.lastname , Address.city , Address.state
 FROM Person
 LEFT JOIN Address ON Person.personId = Address.personId
+
+
+##runtime 1130m solution
+# Write your MySQL query statement below
+# SELECT
+#  firstName,lastName,city,state
+#   FROM person p
+#    left JOIN Address a
+#     ON p.personId = a.addressId;
+select p.FirstName, p.LastName, a.City, a.State from person p
+join address a on p.personid = a.personid
+union
+select p.FirstName, p.LastName, null as City, null as State from person p
+where not exists (select 1 from address a where p.personid = a.personid)
