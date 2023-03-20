@@ -1,0 +1,17 @@
+# Write your MySQL query statement below
+
+# select customer_number
+# from Orders
+# group by customer_number
+# having count(*) = (
+#   select max(order_count)
+#   from (
+#     SELECT COUNT(*) as order_count FROM Orders GROUP BY customer_number
+#   ) as counts
+# )
+
+select customer_number
+from Orders
+group by customer_number
+order by count(customer_number) desc
+limit 1
