@@ -1,0 +1,10 @@
+# Write your MySQL query statement below
+# first attempt over 500ms
+# select class from Courses group by class having count(*) >= 5
+
+# Write your MySQL query statement below
+# sepecify count 471ms
+select class
+from Courses
+group by class
+having count(student) >= 5
