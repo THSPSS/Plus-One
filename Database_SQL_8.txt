@@ -1,0 +1,8 @@
+# Write your MySQL query statement below
+# using where clauses
+# select *
+# from Patients
+# where conditions like "% DIAB1%" or conditions like "DIAB1%"
+
+# using regular expression
+select * from patients where conditions regexp '\\bdiab1'
