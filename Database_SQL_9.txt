@@ -1,0 +1,16 @@
+# Write your MySQL query statement below
+#first attemp
+#where clauses no need to be added
+# update Salary
+# set sex = (case when sex = 'f' then 'm'
+#                 when sex = 'm' then 'f'
+#            end)
+# where sex = 'f' or sex = 'm'
+
+#other solution using if
+# update Salary
+# set sex = if(sex='f' , 'm' ,'f')
+
+#other solution using case
+update Salary
+set sex = (case when sex = 'f' then 'm' else 'f' end)
