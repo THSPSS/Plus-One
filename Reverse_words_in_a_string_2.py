@@ -9,3 +9,12 @@ class Solution:
         s = s.split()
         s.reverse()
         return " ".join(s)
+
+    def MemoryReverseWords(self, s: str) -> str:
+        s = s.split(' ')
+
+        s = [x for x in s if x != '']
+
+        s = s[::-1]
+
+        return ' '.join(s).strip(' ')
