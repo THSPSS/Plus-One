@@ -9,4 +9,4 @@ class Solution:
         #return nums * 2
 
         #using Slicing and addition
-        #return nums+nums[:]
+        return nums+nums[:]
