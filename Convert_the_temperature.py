@@ -5,4 +5,4 @@ class Solution:
         #it takes loger so changed to below one
         return [celsius + 273.15 , celsius * 1.80 + 32.00]
         # other solution
-        return [(celsius + 273.15),(celsius * 1.80 + 32.00)]
+        #return [(celsius + 273.15),(celsius * 1.80 + 32.00)]
