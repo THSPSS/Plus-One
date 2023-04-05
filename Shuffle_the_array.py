@@ -47,3 +47,24 @@ class Solution:
         #
         # return res
 
+        #love this solution
+        #easy to understand and code is readable
+
+        # nums = [2,5,1,3,4,7]
+        # n = 3
+        # the nums array is currently structured as [x1,x2,x3,y1,y2,y3]
+        # must return in this order [x1,y1,x2,y2,x3,y3]
+        # n represents the amout of indexes we must jump over to retrieve the element we are looking for
+        # Step 1 - create an empty array
+        # Step 2 - grab the first element and add it to the new array
+        # Step 3 - loop over the array n times and append that value to the array
+        # Step 4 - return new array
+
+
+
+        # result = [0] * (2 * n) # this creates a list of 0's of 2 x 3 which is [0,0,0,0,0,0]
+        #
+        # for i in range(n):
+        #     result[2 * i] = nums[i]
+        #     result[2 * i + 1] = nums[n + i]
+        # return result
