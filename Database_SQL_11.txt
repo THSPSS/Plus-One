@@ -1,0 +1,38 @@
+## my solution. but it is really burte
+SELECT distinct CART_ID
+FROM CART_PRODUCTS
+WHERE CART_ID IN (select cart_id
+                 from CART_PRODUCTS
+                 where name ='Milk')
+                 and
+                 CART_ID in (select cart_id
+                 from CART_PRODUCTS
+                 where name ='Yogurt')
+
+## other solution
+SELECT CART_ID
+FROM CART_PRODUCTS
+WHERE NAME = 'Milk' AND CART_ID IN (
+    SELECT CART_ID
+    FROM CART_PRODUCTS
+    WHERE NAME = 'Yogurt'
+)
+ORDER BY CART_ID;
+
+## solution with oracle
+## using group by and having
+select cart_id
+from cart_products
+group by cart_id
+having sum(case when name = 'Milk' then 1 else 0 end) > 0
+   and sum(case when name = 'Yogurt' then 1 else 0 end) > 0
+order by cart_id
+
+
+## in and distict
+SELECT CART_ID
+FROM CART_PRODUCTS
+WHERE NAME IN ('Milk', 'Yogurt')
+GROUP BY CART_ID
+HAVING COUNT(DISTINCT(NAME)) >= 2
+ORDER BY CART_ID
