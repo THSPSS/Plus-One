@@ -31,3 +31,19 @@ class Solution:
         new_array[1::2] = [nums[i+n] for i in range(n)]
         return new_array
 
+        #other solution
+        # simple and readable and also runtime was shortest
+        # x = nums[:n]
+        # y = nums[n:]
+        # is this part should be added?
+        # # x.sort()
+        # # y.sort()
+        #
+        # res = []
+        #
+        # for i in range(n):
+        #     res.append(x[i])
+        #     res.append(y[i])
+        #
+        # return res
+
