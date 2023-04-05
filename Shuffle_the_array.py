@@ -68,3 +68,11 @@ class Solution:
         #     result[2 * i] = nums[i]
         #     result[2 * i + 1] = nums[n + i]
         # return result
+
+        #using zip
+        # it was interesting approach and i am not used to zip or map so this solution helping me to understand those
+        # more
+        res = []
+        for i, j in zip(nums[:n], nums[n:]):
+            res += [i, j]
+        return res
