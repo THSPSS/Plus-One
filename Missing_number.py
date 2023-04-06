@@ -1,3 +1,4 @@
+from typing import List
 def missingNumber(self , nums: List[int]) -> int:
     ##first attempt
     # for i in range(len(nums)+1):
