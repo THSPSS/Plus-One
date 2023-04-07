@@ -13,3 +13,12 @@ class Solution:
     def OtherFinalValueAfterOperations(self, operations: List[str]) -> int:
         ref = {'++X': 1, 'X++': 1, '--X': -1, 'X--': -1}
         return sum(ref[o] for o in operations)
+
+    def OhterfinalValueAfterOperations(self, operations: List[str]) -> int:
+        c = 0
+        for i in operations:
+            if i[1]=='+':
+                c+=1
+            else:
+                c-=1
+        return c
