@@ -22,3 +22,9 @@ class Solution:
             else:
                 c-=1
         return c
+
+    ## one line solution
+    # because start is 0
+    # so using sum of the list like the below one
+    #return sum(1 if '+' in i else -1 for i in operations)
+    #return len(operations) - str(operations).count('-')
