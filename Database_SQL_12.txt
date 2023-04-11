@@ -1,0 +1,31 @@
+
+#Write an SQL query to rank the scores. The ranking should be calculated
+#according to the following rules:
+
+#The scores should be ranked from the highest to the lowest.
+#If there is a tie between two scores, both should have the same ranking.
+#After a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no holes between ranks.
+#Return the result table ordered by score in descending order.
+
+#The query result format is in the following example.
+
+
+# Write your MySQL query statement below
+SELECT score, DENSE_RANK() OVER (ORDER BY score DESC) AS 'rank'
+FROM Scores;
+
+
+
+SELECT S.Score, COUNT(S2.Score) AS Rank FROM Scores S,
+(SELECT DISTINCT Score FROM Scores) S2
+WHERE S.Score<=S2.Score
+GROUP BY S.Id
+ORDER BY S.Score DESC;
+
+
+
+
+SELECT Score, convert(Rank,SIGNED) AS Rank FROM
+    (SELECT Score, @rank:=CASE WHEN Score=@previous THEN @rank ELSE @rank+1 END AS Rank, @previous:=Score FROM Scores,
+        (SELECT @previous:=-1,@rank:=0) AS initial
+    ORDER BY Score DESC) A;
