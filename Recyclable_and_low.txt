@@ -1,0 +1,18 @@
+This is a FB DE interview question in 2019H2 - 2020H1.
+There are 4 SQL questions in 30 minute,this one is the first and easiest for warming up.
+But in the real interview, the description is harder than LC.
+
+
+The original question is :
+
+Write a query to get the percentage of certain products
+
+SELECT ROUND(AVG(CASE WHEN low_fats = 'Y' OR recyclable = 'Y' THEN 1 ELSE 0 END),2) AS  PERCENTAGE
+
+
+
+
+# Write your MySQL query statement below
+select product_id
+from Products
+where low_fats ='Y' and recyclable = 'Y'
