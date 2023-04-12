@@ -19,5 +19,9 @@ class Solution:
         return n * 2
 
     #using Bit solution
+    # & this is bitwise AND operation
+    # if result of n & 1 is 1 , it means even number
+    # and then perform left shift of n by 1,
+    # equivalent to multiplying n by 2
     def bitSmallestEvenMultiple(self, n):
         return n << (n & 1)
