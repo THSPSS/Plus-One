@@ -22,3 +22,13 @@ class Solution:
     def ohterKidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         maxCandies = max(candies)
         return [candy+extraCandies >= maxCandies for candy in candies]
+
+    # it is important making code readable and checking time and space complexity
+    #
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        high_enough = max(candies) - extraCandies
+        result = []
+        for num in candies:
+            if num >= high_enough:
+                result.append(num)
+        return result
