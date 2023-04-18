@@ -6,3 +6,4 @@ class Solution:
             '()' : 'o',
             '(al)': 'al'
         }
+        #and making for loop through str
