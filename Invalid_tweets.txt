@@ -1,5 +1,5 @@
 '''
-Table: Tweets
+#Table: Tweets
 
 +----------------+---------+
 | Column Name    | Type    |
@@ -7,18 +7,38 @@ Table: Tweets
 | tweet_id       | int     |
 | content        | varchar |
 +----------------+---------+
-tweet_id is the primary key for this table.
-This table contains all the tweets in a social media app.
+# tweet_id is the primary key for this table.
+# This table contains all the tweets in a social media app.
+#
+#
+# Write an SQL query to find the IDs of the invalid tweets.
+# The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+#
+# Return the result table in any order.
+#
+# The query result format is in the following example.
 
 
-Write an SQL query to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+Reference:
+https://stackoverflow.com/questions/1734334/mysql-length-vs-char-length?rq=1
 
-Return the result table in any order.
+# LENGTH() returns the length of the string measured in bytes.
+# CHAR_LENGTH() returns the length of the string measured in characters.
 
-The query result format is in the following example.
+#SELECT LENGTH('€')  # is equal to 3
+
+#SELECT CHAR_LENGTH('€') # is equal to 1
+
 '''
 
+# worng answer
 # Write your MySQL query statement below
 select tweet_id
 from Tweets
 where LENGTH(content) > 15;
+
+
+# Write your MySQL query statement below
+select tweet_id
+from Tweets
+where CHAR_LENGTH(content) > 15;
