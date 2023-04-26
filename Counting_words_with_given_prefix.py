@@ -1,3 +1,4 @@
+from typing import List
 class Solution:
     #my solution
     def prefixCount(self, words: List[str], pref: str) -> int:

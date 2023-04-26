@@ -8,6 +8,17 @@ Return the target array.
 
 It is guaranteed that the insertion operations will be valid.
 '''
-
+from typing import List
 class Solution:
+    #using Insert
     def createTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        new_list = []
+        for n , i in zip(nums, index):
+            new_list.insert(i ,n)
+        return (new_list)
+    #without using Insert
+    def otherCeateTargetArray(self, nums: List[int], index: List[int]) -> List[int]:
+        arr = []
+        for n, i in zip(nums, index):
+            arr[i:i] = [n]
+        return arr
