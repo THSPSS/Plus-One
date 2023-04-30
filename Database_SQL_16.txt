@@ -1,0 +1,16 @@
+'''
+(SELECT MAX(Salary) FROM Employee) is a subquery that finds the maximum salary in the "Employee" table.
+In this case, the result is 300.
+
+The main query SELECT MAX(Salary) FROM Employee WHERE Salary < 300
+retrieves the maximum salary from the "Employee" table
+but restricts the selection to only those records where the salary is less than 300.
+
+get max value from result that less than 300
+using subquery
+
+'''
+
+
+Select MAX(Salary) from Employee
+where Salary < (Select MAX(Salary) from Employee)
