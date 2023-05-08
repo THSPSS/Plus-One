@@ -15,6 +15,7 @@ class Solution:
         pass
 
 '''
+c language
 class Solution{
 public:
     int minimumSum(int num){
