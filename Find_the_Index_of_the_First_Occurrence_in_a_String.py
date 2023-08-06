@@ -13,9 +13,10 @@ The first occurrence is at index 0, so we return 0.
 
 a = "sadbutsad"
 b = "sad"
+class Solution:
+    def find_the_index_of_the_first_occurrence_in_a_String(self, haystack , needle):
+        if needle in haystack:
+            print(a.split(b))
+            return True
 
-if b in a:
-    print(a.split(b))
-
-else:
-    print("-1")
+        return -1
