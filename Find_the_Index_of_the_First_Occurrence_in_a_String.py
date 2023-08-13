@@ -12,12 +12,17 @@ The first occurrence is at index 0, so we return 0.
 
 
 a = "sadbutsad"
-b = "you"
+b = "sad"
 class Solution:
     def find_the_index_of_the_first_occurrence_in_a_String(self, haystack , needle):
             haystack_len = len(haystack)
             needle_len = len(needle)
-            return haystack.find(needle)
+            for i in range(haystack_len):
+                if haystack[i:i+needle_len] == needle :
+                    return i
+                else:
+                    return -1
+            #return haystack.find(needle)
 
 
 solution = Solution()
