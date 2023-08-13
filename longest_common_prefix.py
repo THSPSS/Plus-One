@@ -25,7 +25,8 @@ class Solution:
         list_min = min([len(i) for i in strs])
         print(f"list_min {list_min}")
         for i in range(list_min-1):
-            print(strs[i])
+            if strs[0][i] == strs[1][i] == strs[2][i]:
+                return strs[0][i]
         return "None"
 
 
