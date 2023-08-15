@@ -14,7 +14,7 @@ Example 2:
 
 Input: strs = ["dog","racecar","car"]
 Output: ""
-Explanation: There is no common prefix among the input strings.
+Explanation: There is no common prefix amongst the input strings.
 
 
 check min string from each word
@@ -33,8 +33,9 @@ class Solution:
         print(f"list_min {list_min}")
         #loop through each vocabs with for loop (with min string from words)
         for i in range(list_min-1):
-            if strs[0][i] == strs[1][i] == strs[2][i]:
-                return strs[0][i]
+            for j in range(len(strs)):
+                if strs[j][i] != strs[j+1][i] == strs[j+2][i]:
+                    return strs[0][i]
         return string
 
 
