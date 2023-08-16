@@ -34,6 +34,7 @@ class Solution:
         #loop through each vocabs with for loop (with min string from words)
         for i in range(list_min-1):
             for j in range(len(strs)):
+                string + strs[j][i]
                 if strs[j][i] != strs[j+1][i] == strs[j+2][i]:
                     return strs[0][i]
         return string
