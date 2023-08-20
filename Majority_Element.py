@@ -44,3 +44,21 @@ class Solution:
         nums.sort()
         n = len(nums)
         return nums[n // 2]
+
+
+'''
+Approach 2: Hash Map
+
+'''
+    def hashMapSolution(self ,  nums: List[int]) -> int:
+       nums_len = len(nums)
+       m = {}
+
+       for number in nums:
+           m[number] += 1
+
+       nums_len = nums_len // 2
+       for k , v in m.items():
+           if v > nums_len:
+               return int(k)
+
