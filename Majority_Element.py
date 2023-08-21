@@ -48,7 +48,7 @@ class Solution:
 
 '''
 Approach 2: Hash Map
-
+using defaultDictionary with key and value
 '''
     def hashMapSolution(self ,  nums: List[int]) -> int:
        nums_len = len(nums)
@@ -60,5 +60,6 @@ Approach 2: Hash Map
        nums_len = nums_len // 2
        for k , v in m.items():
            if v > nums_len:
+               assert isinstance(k, object)
                return int(k)
 
