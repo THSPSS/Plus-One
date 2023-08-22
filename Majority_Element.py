@@ -45,21 +45,27 @@ class Solution:
         n = len(nums)
         return nums[n // 2]
 
+    def hashMapSolution(self, nums: List[int]) -> int:
+        nums_len = len(nums)
+        m = {}
+
+        for number in nums:
+            if number in m:
+                m[number] += 1
+            else:
+                m[number] = 1
+
+        nums_len //= 2
+        for k, v in m.items():
+            if v > nums_len:
+                return k
+
 
 '''
 Approach 2: Hash Map
 using defaultDictionary with key and value
 '''
-    def hashMapSolution(self ,  nums: List[int]) -> int:
-       nums_len = len(nums)
-       m = {}
 
-       for number in nums:
-           m[number] += 1
 
-       nums_len = nums_len // 2
-       for k , v in m.items():
-           if v > nums_len:
-               assert isinstance(k, object)
-               return int(k)
+
 
