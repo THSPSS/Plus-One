@@ -24,6 +24,17 @@ then return empty string
 otherwise compare all word from start until there is different
 
 '''
+
+'''
+check first word and if first word is not same than it has not have prefix
+which return emtpy string like this ""
+if all words had same first word than move on to next word
+
+so it does not have to be all words. pick any word and start it
+
+in this case first index word can be fine
+
+'''
 from typing import List
 
 class Solution:
