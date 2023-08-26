@@ -43,6 +43,14 @@ class Solution:
         list_min = min([len(i) for i in strs])
         print(f"list_min {list_min}")
         #loop through each vocabs with for loop (with min string from words)
+        for num in range(list_min):
+            print(strs[0][num])
+            string += strs[0][num]
+            for element in strs:
+                if not element.startswith(string):
+                    string = ""
+                    break
+
         return string
 
 
@@ -52,4 +60,5 @@ class Solution:
 solution = Solution()
 
 strs = ["flower" , "flow" , "flight"]
-print(solution.longestCommonPrefix(strs))
+answer = solution.longestCommonPrefix(strs)
+print(answer)
