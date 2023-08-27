@@ -37,28 +37,29 @@ in this case first index word can be fine
 '''
 from typing import List
 
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         string = ""
         list_min = min([len(i) for i in strs])
         print(f"list_min {list_min}")
-        #loop through each vocabs with for loop (with min string from words)
+        # loop through each vocabs with for loop (with min string from words)
         for num in range(list_min):
             print(strs[0][num])
             string += strs[0][num]
+            print(f"string after add str[0][num] {string}")
             for element in strs:
+                print(f"element {element}")
                 if not element.startswith(string):
-                    string = ""
                     break
+                else:
+                    return string
 
         return string
 
 
-
-
-
 solution = Solution()
 
-strs = ["flower" , "flow" , "flight"]
+strs = ["flower", "flow", "flight"]
 answer = solution.longestCommonPrefix(strs)
-print(answer)
+print(f"this is answer {answer}")
