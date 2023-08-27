@@ -44,6 +44,7 @@ class Solution:
         list_min = min([len(i) for i in strs])
         print(f"list_min {list_min}")
         # loop through each vocabs with for loop (with min string from words)
+        # it only return the first word
         for num in range(list_min):
             print(strs[0][num])
             string += strs[0][num]
@@ -52,8 +53,6 @@ class Solution:
                 print(f"element {element}")
                 if not element.startswith(string):
                     break
-                else:
-                    return string
 
         return string
 
