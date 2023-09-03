@@ -41,6 +41,7 @@ from typing import List
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         string = ""
+        least_num = None
         list_min = min([len(i) for i in strs])
         print(f"list_min {list_min}")
         # loop through each vocabs with for loop (with min string from words)
@@ -52,9 +53,9 @@ class Solution:
             for element in strs:
                 print(f"element {element}")
                 if not element.startswith(string):
-                    break
+                    least_num = num - 1
 
-        return string
+        return strs[0][0:least_num]
 
 
 solution = Solution()
