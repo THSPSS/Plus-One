@@ -50,9 +50,13 @@ class Solution:
             print(strs[0][num])
             string += strs[0][num]
             print(f"string after add str[0][num] {string}")
-            for element in strs:
-                print(f"element {element}")
-                if not element.startswith(string):
+            for i in range(1 , len(strs)):
+                print(f"element {strs[i]}")
+                if strs[i][0] != string:
+                    string = ""
+                    return string
+                    break
+                if not strs[i].startswith(string):
                     least_num = num - 1
 
         return strs[0][0:least_num]
