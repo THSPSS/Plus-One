@@ -13,12 +13,32 @@ class LinkedList:
         self.tail = new_value
         self.length = 1
 
+    def print_list(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
+
+    def append(self, value):
+        new_value = Node(value)
+        #if there is no value on Linked list  (Empty) than make head and tail point to new_value
+        self.tail.next = new_value
+        self.tail = new_value
+        self.length += 1
+
 
 my_linked_list = LinkedList(4)
 
 print('Head:', my_linked_list.head.value)
 print('Tail:', my_linked_list.tail.value)
 print('Length:', my_linked_list.length)
+print(my_linked_list.print_list())
+print(my_linked_list.append(2))
+print(my_linked_list.append(1))
+print('Head:', my_linked_list.head.value)
+print('Tail:', my_linked_list.tail.value)
+print('Length:', my_linked_list.length)
+print(my_linked_list.print_list())
 
 """
     EXPECTED OUTPUT:
