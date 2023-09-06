@@ -20,25 +20,39 @@ class LinkedList:
             temp = temp.next
 
     def append(self, value):
-        new_value = Node(value)
+        new_node = Node(value)
         #if there is no value on Linked list  (Empty) than make head and tail point to new_value
-        self.tail.next = new_value
-        self.tail = new_value
+        if self.head is None:
+            #my code : self.__init__(value)
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
         self.length += 1
+        return True
 
 
-my_linked_list = LinkedList(4)
+# my_linked_list = LinkedList(4)
+#
+# print('Head:', my_linked_list.head.value)
+# print('Tail:', my_linked_list.tail.value)
+# print('Length:', my_linked_list.length)
+# print(my_linked_list.print_list())
+# print(my_linked_list.append(2))
+# print(my_linked_list.append(1))
+# print('Head:', my_linked_list.head.value)
+# print('Tail:', my_linked_list.tail.value)
+# print('Length:', my_linked_list.length)
+# print(my_linked_list.print_list())
 
-print('Head:', my_linked_list.head.value)
-print('Tail:', my_linked_list.tail.value)
-print('Length:', my_linked_list.length)
-print(my_linked_list.print_list())
-print(my_linked_list.append(2))
-print(my_linked_list.append(1))
-print('Head:', my_linked_list.head.value)
-print('Tail:', my_linked_list.tail.value)
-print('Length:', my_linked_list.length)
-print(my_linked_list.print_list())
+my_linked_list = LinkedList(1)
+
+my_linked_list.append(2)
+
+my_linked_list.print_list()
+
+
 
 """
     EXPECTED OUTPUT:
