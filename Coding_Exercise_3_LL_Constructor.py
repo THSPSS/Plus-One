@@ -22,15 +22,24 @@ class LinkedList:
     def append(self, value):
         new_node = Node(value)
         #if there is no value on Linked list  (Empty) than make head and tail point to new_value
-        if self.head is None:
-            #my code : self.__init__(value)
+        #if self.head is None:
+        if self.length == 0:
+            #self.__init__(value)
             self.head = new_node
             self.tail = new_node
         else:
             self.tail.next = new_node
             self.tail = new_node
+            #self.length += 1
         self.length += 1
         return True
+
+    #make pop last value of linked list
+    #first find the before of last value which is next is none
+    #and find last value before's next value to none
+    #and make tail to point that one
+    def pop(self):
+        return
 
 
 # my_linked_list = LinkedList(4)
