@@ -39,13 +39,20 @@ class LinkedList:
     #and find last value before's next value to none
     #and make tail to point that one
     def pop(self):
+        #Edge case 1#
         if self.length == 0:
             print("Empty linked list")
             return True
+        #Edge case 2#
         if self.length == 1:
             self.head = None
             self.tail = None
             self.length = 0
+
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
         return
 
 
