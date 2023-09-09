@@ -39,6 +39,13 @@ class LinkedList:
     #and find last value before's next value to none
     #and make tail to point that one
     def pop(self):
+        if self.length == 0:
+            print("Empty linked list")
+            return True
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+            self.length = 0
         return
 
 
@@ -60,8 +67,8 @@ my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 
 my_linked_list.print_list()
-
-
+my_linked_list.pop()
+my_linked_list.print_list()
 
 """
     EXPECTED OUTPUT:
