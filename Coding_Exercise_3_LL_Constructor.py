@@ -19,6 +19,11 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
+    def make_empty(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+
     def append(self, value):
         new_node = Node(value)
         #if there is no value on Linked list  (Empty) than make head and tail point to new_value
