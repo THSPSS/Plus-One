@@ -81,9 +81,11 @@ class LinkedList:
 # print('Length:', my_linked_list.length)
 # print(my_linked_list.print_list())
 
-my_linked_list = LinkedList()
+my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 my_linked_list.append(3)
+my_linked_list.append(4)
+my_linked_list.append(5)
 my_linked_list.print_list()
 my_linked_list.pop()
 my_linked_list.print_list()
