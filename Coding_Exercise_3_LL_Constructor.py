@@ -48,11 +48,23 @@ class LinkedList:
             self.head = None
             self.tail = None
             self.length = 0
+            return True
 
+        # temp = self.head.next.next
+        # self.head.next = None
+        # self.tail = self.head
+        # print(f"self.tail , self heade {self.head}{self.head}")
         temp = self.head
-        while temp is not None:
-            print(temp.value)
+        print(f"self.lenght {self.length}")
+        for i in range(self.length - 1):
+            print(f"{i}{temp.value}")
+            if i == self.length - 1 - 1:
+                print("i is self.length - 1")
+                self.tail = temp
+                temp.next = None
+                break
             temp = temp.next
+
         return
 
 
@@ -69,10 +81,9 @@ class LinkedList:
 # print('Length:', my_linked_list.length)
 # print(my_linked_list.print_list())
 
-my_linked_list = LinkedList(1)
-
+my_linked_list = LinkedList()
 my_linked_list.append(2)
-
+my_linked_list.append(3)
 my_linked_list.print_list()
 my_linked_list.pop()
 my_linked_list.print_list()
