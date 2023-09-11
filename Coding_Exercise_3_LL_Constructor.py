@@ -47,30 +47,31 @@ class LinkedList:
         #Edge case 1#
         if self.length == 0:
             print("Empty linked list")
-            return True
-        #Edge case 2#
-        if self.length == 1:
+            return None
+        temp = self.head
+        prev = self.head
+        while temp.next :
+            prev = temp
+            temp = temp.next
+        self.tail = prev
+        self.tail.next = None
+        self.length -= 1
+        if self.length == 0:
             self.head = None
             self.tail = None
-            self.length = 0
-            return True
-
-        # temp = self.head.next.next
-        # self.head.next = None
-        # self.tail = self.head
-        # print(f"self.tail , self heade {self.head}{self.head}")
-        temp = self.head
-        print(f"self.lenght {self.length}")
-        for i in range(self.length - 1):
-            print(f"{i}{temp.value}")
-            if i == self.length - 1 - 1:
-                print("i is self.length - 1")
-                self.tail = temp
-                temp.next = None
-                break
-            temp = temp.next
-
-        return
+        #My code
+        # temp = self.head
+        # print(f"self.lenght {self.length}")
+        # for i in range(self.length - 1):
+        #     print(f"{i}{temp.value}")
+        #     if i == self.length - 1 - 1:
+        #         print("i is self.length - 1")
+        #         self.tail = temp
+        #         temp.next = None
+        #         self.length -= 1
+        #         break
+        #     temp = temp.next
+        return temp
 
 
 # my_linked_list = LinkedList(4)
