@@ -24,20 +24,20 @@ class LinkedList:
         self.tail = None
         self.length = 0
 
-    def append(self, value):
-        new_node = Node(value)
-        #if there is no value on Linked list  (Empty) than make head and tail point to new_value
-        #if self.head is None:
-        if self.length == 0:
-            #self.__init__(value)
-            self.head = new_node
-            self.tail = new_node
-        else:
-            self.tail.next = new_node
-            self.tail = new_node
-            #self.length += 1
-        self.length += 1
-        return True
+    # def append(self, value):
+    #     new_node = Node(value)
+    #     #if there is no value on Linked list  (Empty) than make head and tail point to new_value
+    #     #if self.head is None:
+    #     if self.length == 0:
+    #         #self.__init__(value)
+    #         self.head = new_node
+    #         self.tail = new_node
+    #     else:
+    #         self.tail.next = new_node
+    #         self.tail = new_node
+    #         #self.length += 1
+    #     self.length += 1
+    #     return True
 
     #make pop last value of linked list
     #first find the before of last value which is next is none
@@ -73,6 +73,23 @@ class LinkedList:
         #     temp = temp.next
         return temp
 
+    #add new value on the first of linked list
+    def append(self,value):
+        new_value = Node(value)
+        temp = self.head
+        if temp is not None:
+            self.head = new_value
+            self.head.next = temp
+        else:
+            self.head = new_value
+            self.tail = new_value
+        self.length += 1
+
+        return True
+    #Edge case when linked list is empty
+
+
+
 
 # my_linked_list = LinkedList(4)
 #
@@ -95,7 +112,9 @@ my_linked_list.append(5)
 my_linked_list.print_list()
 my_linked_list.pop()
 my_linked_list.print_list()
-
+my_linked_list.append(0)
+print("after append")
+my_linked_list.print_list()
 """
     EXPECTED OUTPUT:
     ----------------
