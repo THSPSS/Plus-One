@@ -76,13 +76,23 @@ class LinkedList:
     #add new value on the first of linked list
     def prepend(self,value):
         new_value = Node(value)
-        temp = self.head
-        if temp is not None:
-            self.head = new_value
-            self.head.next = temp
-        else:
+        #my code
+        # temp = self.head
+        # if temp is not None:
+        #     self.head = new_value
+        #     self.head.next = temp
+        # else:
+        #     self.head = new_value
+        #     self.tail = new_value
+        # self.length += 1
+
+        #other solution
+        if self.length == 0:
             self.head = new_value
             self.tail = new_value
+        else:
+            new_value.next = self.head
+            self.head = new_value
         self.length += 1
 
         return True
