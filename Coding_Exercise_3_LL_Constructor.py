@@ -98,6 +98,14 @@ class LinkedList:
         return True
     #Edge case when linked list is empty
 
+    def pop_first(self):
+        #pop first item of linked list
+        if self.length == 0:
+            return None
+        temp = self.head
+        self.head = self.head.next
+        return temp
+
 
 
 
@@ -124,6 +132,8 @@ my_linked_list.pop()
 my_linked_list.print_list()
 my_linked_list.prepend(0)
 print("after prepend 0")
+my_linked_list.print_list()
+my_linked_list.pop_first()
 my_linked_list.print_list()
 """
     EXPECTED OUTPUT:
