@@ -106,6 +106,9 @@ class LinkedList:
         self.head = self.head.next
         return temp
 
+    def get(self,value):
+        return True
+
 
 
 
