@@ -94,16 +94,20 @@ class LinkedList:
             new_value.next = self.head
             self.head = new_value
         self.length += 1
-
         return True
     #Edge case when linked list is empty
 
     def pop_first(self):
-        #pop first item of linked list
+        #pop first item of out of the linked list
         if self.length == 0:
             return None
         temp = self.head
-        self.head = self.head.next
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            self.head = self.head.next
+        self.length -= 1
         return temp
 
     def get(self,value):
