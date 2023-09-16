@@ -107,6 +107,9 @@ class LinkedList:
             self.tail = None
         else:
             self.head = self.head.next
+            #before plainly return temp value, make sure that temp.next is None
+            #because after pop, it is not part of linked list
+            temp.next = None
         self.length -= 1
         return temp
 
