@@ -117,13 +117,13 @@ class LinkedList:
     def get(self, index):
         #loop through the linked list and return the item of given index
         temp = self.head
-        pre = self.head
         cnt = 0
         if index <= self.length:
             for i in range(index):
                 cnt += 1
+                print(temp.value)
                 temp = temp.next
-            return temp
+            return temp.value
         else:
             return None
         return True
@@ -157,6 +157,7 @@ print("after prepend 0")
 my_linked_list.print_list()
 my_linked_list.pop_first()
 my_linked_list.print_list()
+my_linked_list.get(1)
 """
     EXPECTED OUTPUT:
     ----------------
