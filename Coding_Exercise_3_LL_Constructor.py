@@ -101,19 +101,31 @@ class LinkedList:
         #pop first item of out of the linked list
         if self.length == 0:
             return None
+        # if self.length == 1:
+        #     self.head = None
+        #     self.tail = None
         temp = self.head
-        if self.length == 1:
-            self.head = None
-            self.tail = None
-        else:
-            self.head = self.head.next
-            #before plainly return temp value, make sure that temp.next is None
-            #because after pop, it is not part of linked list
-            temp.next = None
+        self.head = self.head.next
+        #before plainly return temp value, make sure that temp.next is None
+        #because after pop, it is not part of linked list
+        temp.next = None
         self.length -= 1
+        if self.length == 1:
+            self.tail = None
         return temp
 
-    def get(self,value):
+    def get(self, index):
+        #loop through the linked list and return the item of given index
+        temp = self.head
+        pre = self.head
+        cnt = 0
+        if index <= self.length:
+            for i in range(index):
+                cnt += 1
+                temp = temp.next
+            return temp
+        else:
+            return None
         return True
 
 
