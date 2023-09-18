@@ -26,31 +26,31 @@ class LinkedList:
 
     def append(self, value):
         new_node = Node(value)
-        #if there is no value on Linked list  (Empty) than make head and tail point to new_value
-        #if self.head is None:
+        # if there is no value on Linked list  (Empty) than make head and tail point to new_value
+        # if self.head is None:
         if self.length == 0:
-            #self.__init__(value)
+            # self.__init__(value)
             self.head = new_node
             self.tail = new_node
         else:
             self.tail.next = new_node
             self.tail = new_node
-            #self.length += 1
+            # self.length += 1
         self.length += 1
         return True
 
-    #make pop last value of linked list
-    #first find the before of last value which is next is none
-    #and find last value before's next value to none
-    #and make tail to point that one
+    # make pop last value of linked list
+    # first find the before of last value which is next is none
+    # and find last value before's next value to none
+    # and make tail to point that one
     def pop(self):
-        #Edge case 1#
+        # Edge case 1#
         if self.length == 0:
             print("Empty linked list")
             return None
         temp = self.head
         prev = self.head
-        while temp.next :
+        while temp.next:
             prev = temp
             temp = temp.next
         self.tail = prev
@@ -59,7 +59,7 @@ class LinkedList:
         if self.length == 0:
             self.head = None
             self.tail = None
-        #My code
+        # My code
         # temp = self.head
         # print(f"self.lenght {self.length}")
         # for i in range(self.length - 1):
@@ -73,10 +73,10 @@ class LinkedList:
         #     temp = temp.next
         return temp
 
-    #add new value on the first of linked list
-    def prepend(self,value):
+    # add new value on the first of linked list
+    def prepend(self, value):
         new_value = Node(value)
-        #my code
+        # my code
         # temp = self.head
         # if temp is not None:
         #     self.head = new_value
@@ -86,7 +86,7 @@ class LinkedList:
         #     self.tail = new_value
         # self.length += 1
 
-        #other solution
+        # other solution
         if self.length == 0:
             self.head = new_value
             self.tail = new_value
@@ -95,10 +95,11 @@ class LinkedList:
             self.head = new_value
         self.length += 1
         return True
-    #Edge case when linked list is empty
+
+    # Edge case when linked list is empty
 
     def pop_first(self):
-        #pop first item of out of the linked list
+        # pop first item of out of the linked list
         if self.length == 0:
             return None
         # if self.length == 1:
@@ -106,8 +107,8 @@ class LinkedList:
         #     self.tail = None
         temp = self.head
         self.head = self.head.next
-        #before plainly return temp value, make sure that temp.next is None
-        #because after pop, it is not part of linked list
+        # before plainly return temp value, make sure that temp.next is None
+        # because after pop, it is not part of linked list
         temp.next = None
         self.length -= 1
         if self.length == 1:
@@ -115,16 +116,15 @@ class LinkedList:
         return temp
 
     def get(self, index):
-        #loop through the linked list and return the item of given index
-        temp = self.head
-        if index < self.length:
-            for i in range(index):
-                temp = temp.next
-            return temp.value
-        else:
+        # loop through the linked list and return the item of given index
+        if index > self.length:
             return None
-
-
+        temp = self.head
+        cnt = 0
+        for i in range(self.length):
+            if i == index:
+                return temp
+            temp = temp.next
 
 
 # my_linked_list = LinkedList(4)
