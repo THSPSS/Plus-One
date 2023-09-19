@@ -116,15 +116,20 @@ class LinkedList:
         return temp
 
     def get(self, index):
-        # loop through the linked list and return the item of given index
-        if index > self.length:
+        # The method should handle the cases where the index is out of bounds.
+
+        # The method should start at the head of the list and traverse the list using the next attribute of the nodes.
+
+        # The method should stop traversing the list when it reaches the specified index and return the node at that position.
+
+        # If the index is out of bounds, the method should return None.
+        if index >= self.length or index < 0:
             return None
         temp = self.head
-        cnt = 0
-        for i in range(self.length):
-            if i == index:
-                return temp
+        for i in range(index):
             temp = temp.next
+        return temp
+
 
 
 # my_linked_list = LinkedList(4)
@@ -145,14 +150,14 @@ my_linked_list.append(2)
 my_linked_list.append(3)
 my_linked_list.append(4)
 my_linked_list.append(5)
-my_linked_list.print_list()
-my_linked_list.pop()
-my_linked_list.print_list()
-my_linked_list.prepend(0)
-print("after prepend 0")
-my_linked_list.print_list()
-my_linked_list.pop_first()
-my_linked_list.print_list()
+# my_linked_list.print_list()
+# my_linked_list.pop()
+# my_linked_list.print_list()
+# my_linked_list.prepend(0)
+# print("after prepend 0")
+# my_linked_list.print_list()
+# my_linked_list.pop_first()
+# my_linked_list.print_list()
 get_value = my_linked_list.get(2)
 print(f"get value {get_value}")
 """
