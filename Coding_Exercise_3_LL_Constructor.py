@@ -130,7 +130,7 @@ class LinkedList:
             temp = temp.next
         return temp.value
 
-    def set(self , index , value):
+    def set_value(self , index , value):
         #update the value of the node at the specified index in the linked list
         if index >= self.length or index < 0:
             return False
@@ -139,6 +139,11 @@ class LinkedList:
             temp = temp.next
         temp.value = value
         return True
+
+    def insert(self, index, value):
+        new_node = Node(value)
+        #insert the new node with the given value at the specified index in the linked list
+        return
 
 
 
