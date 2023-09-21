@@ -141,8 +141,17 @@ class LinkedList:
         return True
 
     def insert(self, index, value):
+        if index < 0 or index >= self.length :
+            return False
         new_node = Node(value)
         #insert the new node with the given value at the specified index in the linked list
+        #edge cases
+        if index == 0:
+            self.prepend(index, value)
+        elif index == self.length - 1:
+            end_of_linked_list = self.get(index)
+            self.append(value)
+        #else
         return
 
 
@@ -178,6 +187,14 @@ print(f"get value {get_value}")
 get_value = my_linked_list.set(2,6)
 get_value = my_linked_list.get(2)
 print(f"get value after set method :{get_value}")
+
+
+
+
+
+
+
+
 """
     EXPECTED OUTPUT:
     ----------------
