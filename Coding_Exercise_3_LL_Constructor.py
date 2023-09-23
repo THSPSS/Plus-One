@@ -128,7 +128,7 @@ class LinkedList:
         temp = self.head
         for i in range(index):
             temp = temp.next
-        return temp.value
+        return temp
 
     def set_value(self , index , value):
         #update the value of the node at the specified index in the linked list
@@ -141,18 +141,23 @@ class LinkedList:
         return True
 
     def insert(self, index, value):
-        if index < 0 or index >= self.length :
+        if index < 0 or index > self.length :
             return False
         new_node = Node(value)
         #insert the new node with the given value at the specified index in the linked list
         #edge cases
         if index == 0:
-            self.prepend(index, value)
-        elif index == self.length - 1:
-            end_of_linked_list = self.get(index)
+            self.prepend(value)
+        elif index == self.length:
             self.append(value)
-        #else
-        return
+        else:
+            new_node = Node(value)
+            before_new_node = self.get(index-1)
+            after_new_node = self.get(index)
+            new_node.next = after_new_node
+            before_new_node.next = new_node
+            self.length += 1
+        return True
 
 
 
@@ -184,9 +189,11 @@ my_linked_list.append(5)
 # my_linked_list.print_list()
 get_value = my_linked_list.get(2)
 print(f"get value {get_value}")
-get_value = my_linked_list.set(2,6)
+get_value = my_linked_list.set_value(2,6)
 get_value = my_linked_list.get(2)
 print(f"get value after set method :{get_value}")
+my_linked_list.insert(1,2)
+my_linked_list.print_list()
 
 
 
