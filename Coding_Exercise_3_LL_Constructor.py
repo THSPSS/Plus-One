@@ -176,6 +176,24 @@ class LinkedList:
             return temp
 
 
+    ## WRITE REVERSE METHOD HERE ##
+    #reverse the order of the nodes in the linked list
+    #head becomes the tail and the tail becomes the head
+    def reverse(self):
+        if self.length == 0:
+            return
+        if self.length == 1:
+            return
+        temp = self.head
+        after = temp.next
+        before = None
+        self.tail = temp
+        temp.next = None
+        while(temp.next):
+            pre.next = temp
+            temp = temp.next
+        return
+
 
 # my_linked_list = LinkedList(4)
 #
