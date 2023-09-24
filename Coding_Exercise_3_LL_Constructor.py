@@ -188,10 +188,10 @@ class LinkedList:
         after = temp.next
         before = None
         self.tail = temp
-        temp.next = None
-        while(temp.next):
-            pre.next = temp
-            temp = temp.next
+        for _ in range(self.length):
+            after.next = temp
+            temp.next = before
+
         return
 
 
