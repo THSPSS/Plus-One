@@ -194,8 +194,6 @@ class LinkedList:
             before = temp
             temp = after
 
-        return
-
 
 # my_linked_list = LinkedList(4)
 #
@@ -228,7 +226,9 @@ print(f"get value {get_value}")
 get_value = my_linked_list.set_value(2,6)
 get_value = my_linked_list.get(2)
 print(f"get value after set method :{get_value}")
-my_linked_list.insert(1,2)
+# my_linked_list.insert(1,2)
+# my_linked_list.print_list()
+my_linked_list.reverse()
 my_linked_list.print_list()
 
 
