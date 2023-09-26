@@ -194,6 +194,14 @@ class LinkedList:
             before = temp
             temp = after
 
+      #Removing an item from the beginning of a Linked List is:
+       #O(1)
+       #This is a place where Linked Lists are better than Lists. Lists are O(n) when removing the first item because of the reindexing that is required.
+
+       #Finding an item by index in a Linked List is:
+       #O(1)
+       #You have to iterate through the Linked List until you get to the index you are looking for.
+
 
 # my_linked_list = LinkedList(4)
 #
