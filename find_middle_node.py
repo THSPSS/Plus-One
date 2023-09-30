@@ -30,8 +30,13 @@ class LinkedList:
         #should be at the middle node of the list
         #The method should return the middle node or the first node of the second half of the list if the list has
         #an even number of nodes
-        slow_pointer = self.head.next
-        fast_pointer = slow_pointer.next
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+            slow_pointer = temp.next
+            fast_pointer = slow_pointer.next
+            if fast_pointer is None :
+               break
         return fast_pointer
 
 
