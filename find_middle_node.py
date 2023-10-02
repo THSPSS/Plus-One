@@ -38,6 +38,19 @@ class LinkedList:
         return slow_pointer
 
 
+    def has_loop(self):
+        #The method should be able to detect if there is a cycle or loop present in the linked list.
+        slow = self.head
+        fast = self.head
+        #while slow.next != self.head or slow.next != None:
+        while fast.next != None:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+        return False
+
+
 
 my_linked_list = LinkedList(1)
 my_linked_list.append(2)
