@@ -52,6 +52,8 @@ class LinkedList:
 
 
 
+
+
 my_linked_list = LinkedList(1)
 my_linked_list.append(2)
 my_linked_list.append(3)
@@ -60,6 +62,12 @@ my_linked_list.append(5)
 
 print( my_linked_list.find_middle_node().value )
 
+# Implement the find_kth_from_end function,
+# which takes the LinkedList (ll) and an integer k as input, and returns the k-th node from the end of the linked list WITHOUT USING LENGTH.
+def find_nkt_from_end(linked_list , k):
+    slow = linked_list.head
+    fast = linked_list.head
+    return
 
 
 """
