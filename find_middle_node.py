@@ -43,7 +43,7 @@ class LinkedList:
         slow = self.head
         fast = self.head
         #while slow.next != self.head or slow.next != None:
-        while fast.next != None:
+        while fast is not None and fast.next is not None:
             slow = slow.next
             fast = fast.next.next
             if slow == fast:
