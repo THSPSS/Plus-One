@@ -67,6 +67,11 @@ print( my_linked_list.find_middle_node().value )
 def find_nkt_from_end(linked_list , k):
     slow = linked_list.head
     fast = linked_list.head
+    #The fast pointer should move k nodes ahead in the list.
+    for _ in range(k):
+        fast = fast.next
+        if fast is None:
+            return None
     return
 
 
