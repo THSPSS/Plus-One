@@ -72,7 +72,10 @@ def find_nkt_from_end(linked_list , k):
         fast = fast.next
         if fast is None:
             return None
-    return
+    while fast.next is not None:
+        slow = slow.next
+        fast = fast.next
+        return slow
 
 
 """
