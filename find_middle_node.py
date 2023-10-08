@@ -71,7 +71,7 @@ def find_kth_from_end(linked_list , k):
         while fast.next is not None and fast is not None:
             slow = slow.next
             fast = fast.next
-            return slow
+        return slow
 
 
 my_linked_list = LinkedList(1)
