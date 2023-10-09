@@ -50,6 +50,12 @@ class LinkedList:
                 return True
         return False
 
+    def partition_list(self, x):
+        #check the list if empty or not
+        if self.head is None:
+            return None
+        return
+
 
 
 # Implement the find_kth_from_end function,
@@ -68,6 +74,11 @@ def find_kth_from_end(linked_list , k):
         slow = slow.next
         fast = fast.next
     return slow
+
+
+
+
+
 
 
 my_linked_list = LinkedList(1)
