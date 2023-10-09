@@ -56,22 +56,18 @@ class LinkedList:
 # which takes the LinkedList (ll) and an integer k as input, and returns the k-th node from the end of the linked list WITHOUT USING LENGTH.
 #### WRITE FIND_KTH_FROM_END FUNCTION HERE ####
 def find_kth_from_end(linked_list , k):
-    print(f"linked_list : {linked_list}")
-    print(f"k : {k}")
-    if linked_list.head is None:
-        return None
-    else:
-        slow = linked_list.head
-        fast = linked_list.head
-        #The fast pointer should move k nodes ahead in the list.
-        for _ in range(k):
-            fast = fast.next
-            if fast is None or fast.next is None:
-                return None
-        while fast.next is not None and fast is not None:
-            slow = slow.next
-            fast = fast.next
-        return slow
+    slow = linked_list.head
+    fast = linked_list.head
+    # The fast pointer should move k nodes ahead in the list.
+    for _ in range(k):
+        if fast is None:
+            return None
+        fast = fast.next
+
+    while fast is not None:
+        slow = slow.next
+        fast = fast.next
+    return slow
 
 
 my_linked_list = LinkedList(1)
