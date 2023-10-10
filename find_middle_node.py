@@ -54,6 +54,12 @@ class LinkedList:
         #check the list if empty or not
         if self.head is None:
             return None
+        #making two linked list
+        #one is for before x
+        #other one is after x
+        before_x = None
+        after_x = None
+        #traverse the original linked list
         return
 
 
