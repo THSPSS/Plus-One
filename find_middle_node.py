@@ -59,6 +59,9 @@ class LinkedList:
         #other one is after x
         before_x = None
         after_x = None
+        temp = self.head
+        while temp is not None:
+            return
         #traverse the original linked list
         return
 
