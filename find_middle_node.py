@@ -62,13 +62,14 @@ class LinkedList:
         temp = self.head
         while temp is not None:
             if temp.value < x:
-                before_x.append(x)
+                before_x.append(temp)
             else:
-                after_x.append(x)
+                after_x.append(temp)
             temp = temp.next
+        before_x.tail = after_x.head
 
         #traverse the original linked list
-        return before_x + after_x
+        return before_x
 
 
 
