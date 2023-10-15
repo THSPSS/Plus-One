@@ -76,6 +76,12 @@ class LinkedList:
         self.head = before_x.next
 
 
+        def remove_duplicates(self):
+            #Using a Set - This approach will have a time complexity of O(n), where n is the number of nodes in the linked list. You are allowed to use the provided Set data structure in your implementation.
+
+            #Without using a Set - This approach will have a time complexity of O(n^2), where n is the number of nodes in the linked list. You are not allowed to use any additional data structures for this implementation.
+
+
 
 # Implement the find_kth_from_end function,
 # which takes the LinkedList (ll) and an integer k as input, and returns the k-th node from the end of the linked list WITHOUT USING LENGTH.
