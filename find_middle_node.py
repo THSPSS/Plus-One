@@ -51,25 +51,29 @@ class LinkedList:
         return False
 
     def partition_list(self, x):
-        #check the list if empty or not
+        # check the list if empty or not
         if self.head is None:
             return None
-        #making two linked list
-        #one is for before x
-        #other one is after x
-        before_x = None
-        after_x = None
+        # making two linked list
+        # one is for before x
+        # other one is after x
+        before_x = Node(0)
+        after_x = Node(0)
+        prev1 = before_x
+        prev2 = after_x
         temp = self.head
         while temp is not None:
             if temp.value < x:
-                before_x.append(temp)
+                prev1.next = temp
+                prev1 = temp
             else:
-                after_x.append(temp)
+                prev2.next = temp
+                prev2 = temp
             temp = temp.next
-        before_x.tail = after_x.head
-
-        #traverse the original linked list
-        return before_x
+        prev1.next = None
+        prev2.next = None
+        prev1.next = after_x.next
+        self.head = before_x.next
 
 
 
