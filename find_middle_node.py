@@ -83,6 +83,12 @@ class LinkedList:
             while temp is not None and temp.next is not None:
                 print("temp "+temp.value)
                 temp = temp.next
+            #use two loops
+            p = self.head
+            q = self.head.next
+            while q is not None:
+                if(q.value == p.value):
+                    return
 
             #Without using a Set - This approach will have a time complexity of O(n^2), where n is the number of nodes in the linked list. You are not allowed to use any additional data structures for this implementation.
 
