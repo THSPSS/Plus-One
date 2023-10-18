@@ -86,10 +86,12 @@ class LinkedList:
             #use two loops
             p = self.head
             q = self.head.next
-            while q is not None:
-                if(q.value == p.value):
-                    return
-
+            for _ in range(self.lenght):
+                for i in range(_,self.length):
+                    if p.value == q.value:
+                        print("duplicate")
+                    q = q.next
+                p = p.next
             #Without using a Set - This approach will have a time complexity of O(n^2), where n is the number of nodes in the linked list. You are not allowed to use any additional data structures for this implementation.
 
 
