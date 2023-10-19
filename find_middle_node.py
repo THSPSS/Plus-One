@@ -88,7 +88,12 @@ class LinkedList:
             q = self.head.next
             for _ in range(self.lenght):
                 for i in range(_,self.length):
+                    prev = q
+                    temp = q
+                    after = q.next
                     if p.value == q.value:
+                        temp.next = None
+                        prev.next = after
                         print("duplicate")
                     q = q.next
                 p = p.next
