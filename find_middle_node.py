@@ -98,6 +98,10 @@ class LinkedList:
                     q = q.next
                 p = p.next
             #Without using a Set - This approach will have a time complexity of O(n^2), where n is the number of nodes in the linked list. You are not allowed to use any additional data structures for this implementation.
+            for _ in range(self.length):
+                print(p.value)
+                p = p.next
+
 
 
 
