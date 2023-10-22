@@ -81,31 +81,17 @@ class LinkedList:
             # where n is the number of nodes in the linked list.
             # You are allowed to use the provided Set data structure in your implementation.
             #traverse the linked list
-            temp = self.head
-            while temp is not None and temp.next is not None:
-                print("temp "+temp.value)
-                temp = temp.next
-            #use two loops
-            p = self.head
-            q = self.head.next
-            for _ in range(self.lenght):
-                for i in range(_,self.length):
-                    prev = q
-                    temp = q
-                    after = q.next
-                    if p.value == q.value:
-                        temp.next = None
-                        prev.next = after
-                        print("duplicate")
-                    q = q.next
-                p = p.next
+            #    // Initialize an empty set to store unique values
+            #create an empty set called values
+            values = []
+            #two pointer for prev and current
+            prev = None
+            current = self.head
+            #traverse the linked list
+            while current is not None and current.next is not None:
             #Without using a Set - This approach will have a time complexity of O(n^2),
             # where n is the number of nodes in the linked list.
             # You are not allowed to use any additional data structures for this implementation.
-            for _ in range(self.length):
-                print(p.value)
-                print("duplicate")
-                p = p.next
 
 
 
