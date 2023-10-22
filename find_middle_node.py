@@ -77,7 +77,9 @@ class LinkedList:
 
 
         def remove_duplicates(self):
-            #Using a Set - This approach will have a time complexity of O(n), where n is the number of nodes in the linked list. You are allowed to use the provided Set data structure in your implementation.
+            #Using a Set - This approach will have a time complexity of O(n),
+            # where n is the number of nodes in the linked list.
+            # You are allowed to use the provided Set data structure in your implementation.
             #traverse the linked list
             temp = self.head
             while temp is not None and temp.next is not None:
@@ -97,9 +99,12 @@ class LinkedList:
                         print("duplicate")
                     q = q.next
                 p = p.next
-            #Without using a Set - This approach will have a time complexity of O(n^2), where n is the number of nodes in the linked list. You are not allowed to use any additional data structures for this implementation.
+            #Without using a Set - This approach will have a time complexity of O(n^2),
+            # where n is the number of nodes in the linked list.
+            # You are not allowed to use any additional data structures for this implementation.
             for _ in range(self.length):
                 print(p.value)
+                print("duplicate")
                 p = p.next
 
 
