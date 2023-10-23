@@ -8,7 +8,7 @@ class LinkedList:
     def __init__(self, value):
         new_node = Node(value)
         self.head = new_node
-        self.tail = new_node
+        self.length = 1
 
 
     def append(self, value):
@@ -83,12 +83,19 @@ class LinkedList:
             #traverse the linked list
             #    // Initialize an empty set to store unique values
             #create an empty set called values
-            values = []
+            values = {}
             #two pointer for prev and current
             prev = None
             current = self.head
             #traverse the linked list
-            while current is not None and current.next is not None:
+            while current is not None:
+                if current.value in values:
+                    prev.next = current.next
+                    self.lenght -= 1
+                else:
+                    values.add(current)
+                    prev = current
+                current = current.next
             #Without using a Set - This approach will have a time complexity of O(n^2),
             # where n is the number of nodes in the linked list.
             # You are not allowed to use any additional data structures for this implementation.
