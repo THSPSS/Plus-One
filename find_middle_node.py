@@ -83,7 +83,7 @@ class LinkedList:
             #traverse the linked list
             #    // Initialize an empty set to store unique values
             #create an empty set called values
-            values = {}
+            values = set()
             #two pointer for prev and current
             prev = None
             current = self.head
@@ -93,12 +93,16 @@ class LinkedList:
                     prev.next = current.next
                     self.lenght -= 1
                 else:
-                    values.add(current)
+                    values.add(current.value)
                     prev = current
                 current = current.next
             #Without using a Set - This approach will have a time complexity of O(n^2),
             # where n is the number of nodes in the linked list.
             # You are not allowed to use any additional data structures for this implementation.
+            for i in range(self.length):
+                for j in range(i , self.length):
+                    if current.value == current.next.value:
+                        print('same')
 
 
 
