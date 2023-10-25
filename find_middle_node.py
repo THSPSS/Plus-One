@@ -101,8 +101,15 @@ class LinkedList:
             # You are not allowed to use any additional data structures for this implementation.
             for i in range(self.length):
                 for j in range(i , self.length):
-                    if current.value == current.next.value:
-                        print('same')
+                    prev = current
+                    after = current.next
+                    if current.value == after.value:
+                        prev.next = after.next
+                        self.length -= 1
+
+
+
+
 
 
 
