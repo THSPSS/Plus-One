@@ -106,6 +106,10 @@ class LinkedList:
                     if current.value == after.value:
                         prev.next = after.next
                         self.length -= 1
+                    else:
+                        prev = after
+                        after = after.next
+                current = current.next
 
 
 
