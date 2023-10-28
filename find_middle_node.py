@@ -100,9 +100,9 @@ class LinkedList:
             # where n is the number of nodes in the linked list.
             # You are not allowed to use any additional data structures for this implementation.
             for i in range(self.length):
+                prev = current
+                after = current.next
                 for j in range(i , self.length):
-                    prev = current
-                    after = current.next
                     if current.value == after.value:
                         prev.next = after.next
                         self.length -= 1
@@ -110,6 +110,8 @@ class LinkedList:
                         prev = after
                         after = after.next
                 current = current.next
+
+
 
 
 
