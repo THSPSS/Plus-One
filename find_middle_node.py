@@ -113,11 +113,9 @@ class LinkedList:
 
 
 
-
-
-
-
-
+        #convert a binary number, represented as a linked list, to its decimal equivalent.
+        def binary_to_decimal(self):
+            return
 
 
 # Implement the find_kth_from_end function,
