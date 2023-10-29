@@ -115,7 +115,12 @@ class LinkedList:
 
         #convert a binary number, represented as a linked list, to its decimal equivalent.
         def binary_to_decimal(self):
-            return
+            result = 0
+            temp = self.head
+            for base in range(self.length):
+                if temp == 1 :
+                    result += 2**self.length
+            return result
 
 
 # Implement the find_kth_from_end function,
