@@ -8,6 +8,7 @@ class LinkedList:
     def __init__(self, value):
         new_node = Node(value)
         self.head = new_node
+        self.tail = new_node
         self.length = 1
 
 
@@ -76,51 +77,54 @@ class LinkedList:
         self.head = before_x.next
 
 
-        def remove_duplicates(self):
-            #Using a Set - This approach will have a time complexity of O(n),
-            # where n is the number of nodes in the linked list.
-            # You are allowed to use the provided Set data structure in your implementation.
-            #traverse the linked list
-            #    // Initialize an empty set to store unique values
-            #create an empty set called values
-            values = set()
-            #two pointer for prev and current
-            prev = None
-            current = self.head
-            #traverse the linked list
-            while current is not None:
-                if current.value in values:
-                    prev.next = current.next
-                    self.lenght -= 1
-                else:
-                    values.add(current.value)
-                    prev = current
-                current = current.next
-            #Without using a Set - This approach will have a time complexity of O(n^2),
-            # where n is the number of nodes in the linked list.
-            # You are not allowed to use any additional data structures for this implementation.
-            for i in range(self.length):
+    def remove_duplicates(self):
+        #Using a Set - This approach will have a time complexity of O(n),
+        # where n is the number of nodes in the linked list.
+        # You are allowed to use the provided Set data structure in your implementation.
+        #traverse the linked list
+        #    // Initialize an empty set to store unique values
+        #create an empty set called values
+        values = set()
+        #two pointer for prev and current
+        prev = None
+        current = self.head
+        #traverse the linked list
+        while current is not None:
+            if current.value in values:
+                prev.next = current.next
+                self.lenght -= 1
+            else:
+                values.add(current.value)
                 prev = current
-                after = current.next
-                for j in range(i , self.length):
-                    if current.value == after.value:
-                        prev.next = after.next
-                        self.length -= 1
-                    else:
-                        prev = after
-                        after = after.next
-                current = current.next
+            current = current.next
+        #Without using a Set - This approach will have a time complexity of O(n^2),
+        # where n is the number of nodes in the linked list.
+        # You are not allowed to use any additional data structures for this implementation.
+        for i in range(self.length):
+            prev = current
+            after = current.next
+            for j in range(i , self.length):
+                if current.value == after.value:
+                    prev.next = after.next
+                    self.length -= 1
+                else:
+                    prev = after
+                    after = after.next
+            current = current.next
 
 
 
-        #convert a binary number, represented as a linked list, to its decimal equivalent.
-        def binary_to_decimal(self):
-            result = 0
-            temp = self.head
-            for base in range(self.length):
-                if temp == 1 :
-                    result += 2**self.length
-            return result
+    #convert a binary number, represented as a linked list, to its decimal equivalent.
+    def binary_to_decimal(self):
+        result = 0
+        temp = self.head
+        for base in range(self.length):
+            if temp == 1 :
+                print("temp is 1")
+                result += 2**self.length
+            temp = temp.next
+
+        return result
 
 
 # Implement the find_kth_from_end function,
@@ -147,14 +151,17 @@ def find_kth_from_end(linked_list , k):
 
 
 my_linked_list = LinkedList(1)
-my_linked_list.append(2)
-my_linked_list.append(3)
-my_linked_list.append(4)
-my_linked_list.append(5)
+# my_linked_list.append(2)
+# my_linked_list.append(3)
+# my_linked_list.append(4)
+# my_linked_list.append(5)
+my_linked_list.append(0)
+my_linked_list.append(1)
 
 k = 2
 print(find_kth_from_end(my_linked_list , k))
 print( my_linked_list.find_middle_node().value )
+print(my_linked_list.binary_to_decimal())
 
 
 
