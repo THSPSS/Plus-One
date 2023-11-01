@@ -20,6 +20,7 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
+        self.length += 1
         return True
 
 
@@ -126,6 +127,8 @@ class LinkedList:
         while temp is not None:
             if temp.value == 1 :
                 result += 2**cnt
+                print(2**cnt)
+                print(f"cnt{cnt}")
             temp = temp.next
             cnt -= 1
 
