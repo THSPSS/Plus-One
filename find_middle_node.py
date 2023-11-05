@@ -169,6 +169,8 @@ my_linked_list = LinkedList(1)
 # my_linked_list.append(5)
 my_linked_list.append(0)
 my_linked_list.append(1)
+my_linked_list.append(1)
+my_linked_list.append(0)
 
 k = 3
 print(f"my_linked_list length {my_linked_list.length}")
