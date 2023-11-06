@@ -124,7 +124,10 @@ class LinkedList:
             print(f"cnt {_}")
             print(f"temp.value {temp.value}")
             if temp.value == 1 :
-                result += 2**int(cnt)
+                if cnt != 1:
+                   result += 2**int(cnt)
+                else:
+                    result += 1
                 print(f"result {result}")
             temp = temp.next
         # while temp is not None:
