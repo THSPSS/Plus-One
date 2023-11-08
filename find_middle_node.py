@@ -118,13 +118,11 @@ class LinkedList:
     #convert a binary number, represented as a linked list, to its decimal equivalent.
     def binary_to_decimal(self):
         result = 0
-        cnt = str(self.length-1)
         temp = self.head
-        for _ in reversed(cnt):
-            print(f"cnt {_}")
+        for i in range(self.length-1 , -1, -1):
             print(f"temp.value {temp.value}")
             if temp.value == 1 :
-               result += 2**int(_)
+               result += 2**int(i)
             print(f"result {result}")
             temp = temp.next
         # while temp is not None:
