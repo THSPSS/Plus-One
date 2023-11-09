@@ -113,6 +113,15 @@ class LinkedList:
                     after = after.next
             current = current.next
 
+        #method remove_duplicates():
+
+    # // Set the current pointer to the head of the list
+    #
+    # set current to head of the list
+
+
+
+
 
 
     #convert a binary number, represented as a linked list, to its decimal equivalent.
@@ -134,6 +143,12 @@ class LinkedList:
         #     cnt -= 1
 
         return result
+
+     #LL: Reverse Between ( ** Interview Question)
+    def reverse_between(self, start, end):
+        temp = self.head
+        #get to the start using for loop
+        return
 
 
 # Implement the find_kth_from_end function,
