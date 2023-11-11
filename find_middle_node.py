@@ -147,7 +147,14 @@ class LinkedList:
      #LL: Reverse Between ( ** Interview Question)
     def reverse_between(self, start, end):
         temp = self.head
+        cnt = 0
         #get to the start using for loop
+        while temp is not None and cnt < start:
+            temp = temp.next
+
+        #get start position and loop through end with prev and after to reverse positions
+        prev = temp
+        after = temp
         return
 
 
