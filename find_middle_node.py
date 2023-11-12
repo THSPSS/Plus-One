@@ -144,6 +144,24 @@ class LinkedList:
 
         return result
 
+
+    def reverse(self):
+        if self.length == 0:
+            return
+        if self.length == 1:
+            return
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        before = None
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
+
+
+
      #LL: Reverse Between ( ** Interview Question)
     def reverse_between(self, start, end):
         temp = self.head
@@ -153,9 +171,15 @@ class LinkedList:
             temp = temp.next
 
         #get start position and loop through end with prev and after to reverse positions
-        prev = temp
-        after = temp
-        return
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        before = None
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp
+            temp = after
 
 
 # Implement the find_kth_from_end function,
