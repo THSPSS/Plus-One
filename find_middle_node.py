@@ -169,13 +169,12 @@ class LinkedList:
         #get to the start using for loop
         while temp is not None and cnt < start:
             temp = temp.next
-
         #get start position and loop through end with prev and after to reverse positions
-        temp = self.head
-        self.head = self.tail
-        self.tail = temp
+        # temp = self.head
+        # self.head = self.tail
+        # self.tail = temp
         before = None
-        for _ in range(self.length):
+        for _ in range(start , end):
             after = temp.next
             temp.next = before
             before = temp
