@@ -166,9 +166,15 @@ class LinkedList:
     def reverse_between(self, start, end):
         temp = self.head
         cnt = 0
+
+        #if the length or or start end is under the lenght than return None
+        if start > self.length or end > self.length :
+            return None
         #get to the start using for loop
         while temp is not None and cnt < start:
             temp = temp.next
+            cnt += 1
+
         #get start position and loop through end with prev and after to reverse positions
         # temp = self.head
         # self.head = self.tail
