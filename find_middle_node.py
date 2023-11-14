@@ -168,13 +168,12 @@ class LinkedList:
         cnt = 0
 
         #if the length or or start end is under the lenght than return None
-        if start > self.length or end > self.length :
+        if start > self.length or end > self.length or temp is None:
             return None
         #get to the start using for loop
         while temp is not None and cnt < start:
             temp = temp.next
             cnt += 1
-
         #get start position and loop through end with prev and after to reverse positions
         # temp = self.head
         # self.head = self.tail
@@ -226,7 +225,7 @@ print(my_linked_list.head.value)
 print(find_kth_from_end(my_linked_list , k).value)
 print( my_linked_list.find_middle_node().value )
 print(my_linked_list.binary_to_decimal())
-
+print(my_linked_list.reverse_between(start=1 , end=3))
 
 
 
