@@ -176,8 +176,8 @@ class LinkedList:
             cnt += 1
         #get start position and loop through end with prev and after to reverse positions
         # temp = self.head
-        # self.head = self.tail
-        # self.tail = temp
+        self.head = self.tail
+        self.tail = temp
         before = None
         for _ in range(start , end):
             after = temp.next
