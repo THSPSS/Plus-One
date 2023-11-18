@@ -181,6 +181,7 @@ class LinkedList:
         self.head = self.tail
         self.tail = temp
         before = None
+        after = None
         #reverse the positions
         for _ in range(start , end):
             after = temp.next
