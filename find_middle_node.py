@@ -176,6 +176,8 @@ class LinkedList:
             cnt += 1
         #check start value
         print(f"temp start {temp.value}")
+        #start temp next
+        start_temp = temp.next
         #get start position and loop through end with prev and after to reverse positions
         # temp = self.head
         self.head = self.tail
