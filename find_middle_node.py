@@ -179,6 +179,8 @@ class LinkedList:
         #start temp next
         #check before and when reverse is done change next value with the end one
         #so it can be reversed and linked list
+        #Example
+        #Suppose the linked list is 1 -> 2 -> 3 -> 4 -> 5, and start_index = 2 and end_index = 4. Then, the method should modify the linked list to 1 -> 2 -> 5 -> 4 -> 3
         before = temp
         start_temp = temp.next
         #get start position and loop through end with prev and after to reverse positions
@@ -189,8 +191,8 @@ class LinkedList:
         after = None
         #reverse the positions
         for _ in range(start , end):
-            after = temp.next
-            temp.next = before
+            after = start_temp
+            start_temp = before
             before = temp
             temp = after
 
