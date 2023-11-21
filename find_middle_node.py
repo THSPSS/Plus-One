@@ -196,6 +196,22 @@ class LinkedList:
             before = temp
             temp = after
 
+        # class Node:
+        ## WRITE NODE CONSTRUCTOR HERE ##
+        #                               #
+        #                               #
+        #                               #
+        #                               #
+        #################################
+
+        # class DoublyLinkedList:
+        ## WRITE DLL CONSTRUCTOR HERE ##
+        #                              #
+        #                              #
+        #                              #
+        #                              #
+        ################################
+
 
 # Implement the find_kth_from_end function,
 # which takes the LinkedList (ll) and an integer k as input, and returns the k-th node from the end of the linked list WITHOUT USING LENGTH.
