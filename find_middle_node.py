@@ -196,6 +196,8 @@ class LinkedList:
             before = temp
             temp = after
 
+
+        ##Design and implement a Python program that defines two classes: Node and DoublyLinkedList.
         # class Node:
         ## WRITE NODE CONSTRUCTOR HERE ##
         #                               #
@@ -253,6 +255,14 @@ print(find_kth_from_end(my_linked_list , k).value)
 print( my_linked_list.find_middle_node().value )
 print(my_linked_list.binary_to_decimal())
 print(my_linked_list.reverse_between(start=1 , end=3))
+
+
+my_doubly_linked_list = DoublyLinkedList(7)
+
+print('Head:', my_doubly_linked_list.head.value)
+print('Tail:', my_doubly_linked_list.tail.value)
+print('Length:', my_doubly_linked_list.length)
+
 
 
 
