@@ -185,6 +185,7 @@ class LinkedList:
         start_temp = temp.next
         #get start position and loop through end with prev and after to reverse positions
         # temp = self.head
+        #check the reverse version and revise it
         self.head = self.tail
         self.tail = temp
         before = None
@@ -257,11 +258,12 @@ print(my_linked_list.binary_to_decimal())
 print(my_linked_list.reverse_between(start=1 , end=3))
 
 
-my_doubly_linked_list = DoublyLinkedList(7)
 
-print('Head:', my_doubly_linked_list.head.value)
-print('Tail:', my_doubly_linked_list.tail.value)
-print('Length:', my_doubly_linked_list.length)
+#my_doubly_linked_list = DoublyLinkedList(7)
+
+#print('Head:', my_doubly_linked_list.head.value)
+#print('Tail:', my_doubly_linked_list.tail.value)
+#print('Length:', my_doubly_linked_list.length)
 
 
 
