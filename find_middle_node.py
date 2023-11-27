@@ -162,13 +162,14 @@ class LinkedList:
 
 
 
+      #InputThe method reverse_between takes two integer inputs start_index and end_index.
+     #The method will only be passed valid indexes (you do not need to test whether the indexes are out of bounds)
      #LL: Reverse Between ( ** Interview Question)
     def reverse_between(self, start, end):
         temp = self.head
         cnt = 0
-
         #if the length or or start end is under the lenght than return None
-        if start > self.length or end > self.length or temp is None:
+        if temp is None:
             return None
         #get to the start using for loop
         while temp is not None and cnt < start:
