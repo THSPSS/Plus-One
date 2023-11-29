@@ -1,11 +1,13 @@
 
 
-#frist split A and B by " "
+# Solution 1
+# split input by " "
 a,b = input().split()
-print(int(a) + int(b))
-#so the two number added on list as String
 #add two String using int conversion
+print(int(a) + int(b))
 
+
+# Solution 2
 #using map to convert input split string to int
 a,b = map(input().split())
 print(a+b)
