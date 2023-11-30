@@ -34,4 +34,12 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+        #loop trough nums
+        #first loop
+        #from target sub the current value
+        #second loop
+        #from first loop number + 1 to end of the list
+        #check if sub from target value is same with current looping value
+        #if so save the value and break the all loop and
+        #return first value and second value as list
         return
