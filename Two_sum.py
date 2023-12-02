@@ -32,14 +32,27 @@ Only one valid answer exists.
 '''
 from typing import List
 
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        #loop trough nums
-        #first loop
-        #from target sub the current value
-        #second loop
-        #from first loop number + 1 to end of the list
-        #check if sub from target value is same with current looping value
-        #if so save the value and break the all loop and
-        #return first value and second value as list
-        return
+        # loop trough nums
+        for i in range(len(nums)):
+            if nums[i] >= target:
+                continue
+            else:
+                find_the_number = target - nums[i]
+                for j in range(i + 1, len(nums)):
+                    if nums[j] == find_the_number:
+                        return [i, j]
+
+        # first loop
+        # from target sub the current value
+        # second loop
+        # from first loop number + 1 to end of the list
+        # check if sub from target value is same with current looping value
+        # if so save the value and break the all loop and
+        # return first value and second value as list
+
+
+solution = Solution()
+print(solution.twoSum(nums=[2,7,11,6],target=9))
