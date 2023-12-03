@@ -55,4 +55,5 @@ class Solution:
 
 
 solution = Solution()
-print(solution.twoSum(nums=[2,7,11,6],target=9))
+print(solution.twoSum(nums=[3,3],target=6))
+print(solution.twoSum(nums=[15,6,7,19,2,5],target=7))
