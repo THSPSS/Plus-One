@@ -37,12 +37,15 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         # loop trough nums
         for i in range(len(nums)):
-            if nums[i] > target:
-                continue
+            if target < 0 :
+                if nums[i] < target:
+                    continue
+            elif nums[i] > target:
+                   continue
             else:
-                find_the_number = target - nums[i]
+                find_the_number = abs(target) - abs(nums[i])
                 for j in range(i + 1, len(nums)):
-                    if nums[j] == find_the_number:
+                    if abs(nums[j]) == find_the_number:
                         return [i, j]
 
         # first loop
@@ -58,4 +61,5 @@ solution = Solution()
 print(solution.twoSum(nums=[3,3],target=6))
 print(solution.twoSum(nums=[15,6,7,19,2,5],target=7))
 print(solution.twoSum(nums=[0,4,3,0],target=0))
+print(solution.twoSum(nums=[-1,-2,-3,-4,-5],target=-8))
 #[-1,-2,-3,-4,-5]
