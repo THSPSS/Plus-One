@@ -34,13 +34,10 @@ from typing import List
 
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def two_sum(self, nums: List[int], target: int) -> List[int]:
         # loop trough nums
         for i in range(len(nums)):
-            if target < 0 :
-                if nums[i] < target:
-                    continue
-            elif nums[i] > target:
+            if abs(nums[i]) > abs(target):
                    continue
             else:
                 find_the_number = abs(target) - abs(nums[i])
@@ -58,8 +55,8 @@ class Solution:
 
 
 solution = Solution()
-print(solution.twoSum(nums=[3,3],target=6))
-print(solution.twoSum(nums=[15,6,7,19,2,5],target=7))
-print(solution.twoSum(nums=[0,4,3,0],target=0))
-print(solution.twoSum(nums=[-1,-2,-3,-4,-5],target=-8))
+print(solution.two_sum(nums=[3,3],target=6))
+print(solution.two_sum(nums=[15,6,7,19,2,5],target=7))
+print(solution.two_sum(nums=[0,4,3,0],target=0))
+print(solution.two_sum(nums=[-1,-2,-3,-4,-5],target=-8))
 #[-1,-2,-3,-4,-5]
