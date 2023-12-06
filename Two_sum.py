@@ -37,13 +37,10 @@ class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         # loop trough nums
         for i in range(len(nums)):
-            if abs(nums[i]) > abs(target):
-                   continue
-            else:
-                find_the_number = abs(target) - abs(nums[i])
-                for j in range(i + 1, len(nums)):
-                    if abs(nums[j]) == find_the_number:
-                        return [i, j]
+            find_the_number: int = target - nums[i]
+            for j in range(i + 1, len(nums)):
+                if nums[j] == find_the_number:
+                    return [i, j]
 
         # first loop
         # from target sub the current value
@@ -55,8 +52,12 @@ class Solution:
 
 
 solution = Solution()
-print(solution.two_sum(nums=[3,3],target=6))
-print(solution.two_sum(nums=[15,6,7,19,2,5],target=7))
-print(solution.two_sum(nums=[0,4,3,0],target=0))
-print(solution.two_sum(nums=[-1,-2,-3,-4,-5],target=-8))
-#[-1,-2,-3,-4,-5]
+print(solution.two_sum(nums=[3, 3], target=6))
+print(solution.two_sum(nums=[15, 6, 7, 19, 2, 5], target=7))
+print(solution.two_sum(nums=[0, 4, 3, 0], target=0))
+print(solution.two_sum(nums=[-1, -2, -3, -4, -5], target=-8))
+print(solution.two_sum(nums=[-3, 4, 3, 90], target=0))
+print(solution.two_sum(nums=[3,2,95,4,-3], target=92))
+#[3,2,95,4,-3]
+# [-3,4,3,90]
+# [-1,-2,-3,-4,-5]
