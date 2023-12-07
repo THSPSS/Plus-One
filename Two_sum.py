@@ -42,6 +42,18 @@ class Solution:
                 if nums[j] == find_the_number:
                     return [i, j]
 
+        #brute force
+        for i in range(len(nums)):
+            for j in range(i + 1 , len(nums)):
+                if nums[i] + nums[j] == target:
+                    return [i , j]
+
+
+        #using hash map
+        #created an empty hash table to store elemnts and their indices
+        hash_table = {}
+
+
         # first loop
         # from target sub the current value
         # second loop
