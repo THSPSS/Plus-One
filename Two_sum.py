@@ -52,6 +52,8 @@ class Solution:
         #using hash map
         #created an empty hash table to store elemnts and their indices
         hash_table = {}
+        for i in range(len(nums)):
+            nums[i]
 
 
         # first loop
