@@ -36,17 +36,17 @@ from typing import List
 class Solution:
     def two_sum(self, nums: List[int], target: int) -> List[int]:
         # loop trough nums
-        for i in range(len(nums)):
-            find_the_number: int = target - nums[i]
-            for j in range(i + 1, len(nums)):
-                if nums[j] == find_the_number:
-                    return [i, j]
-
-        #brute force
-        for i in range(len(nums)):
-            for j in range(i + 1 , len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i , j]
+        # for i in range(len(nums)):
+        #     find_the_number: int = target - nums[i]
+        #     for j in range(i + 1, len(nums)):
+        #         if nums[j] == find_the_number:
+        #             return [i, j]
+        #
+        # #brute force
+        # for i in range(len(nums)):
+        #     for j in range(i + 1 , len(nums)):
+        #         if nums[i] + nums[j] == target:
+        #             return [i , j]
 
 
         #using hash map
@@ -54,11 +54,9 @@ class Solution:
         hash_table = {}
         for i in range(len(nums)):
             complement = target - nums[i]
-            if complement is in hash_table:
+            if complement in hash_table:
                 return [i,hash_table[complement]]
-            else:
-                hash_table[nums[i]] = i
-
+            hash_table[nums[i]] = i
 
         # first loop
         # from target sub the current value
