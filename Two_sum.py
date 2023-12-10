@@ -53,7 +53,11 @@ class Solution:
         #created an empty hash table to store elemnts and their indices
         hash_table = {}
         for i in range(len(nums)):
-            nums[i]
+            complement = target - nums[i]
+            if complement is in hash_table:
+                return [i,hash_table[complement]]
+            else:
+                hash_table[nums[i]] = i
 
 
         # first loop
