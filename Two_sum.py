@@ -55,7 +55,7 @@ class Solution:
         for i in range(len(nums)):
             complement = target - nums[i]
             if complement in hash_table:
-                return [i,hash_table[complement]]
+                return [hash_table[complement],i]
             hash_table[nums[i]] = i
 
         # first loop
