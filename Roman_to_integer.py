@@ -26,4 +26,6 @@ class Solution:
     def romanToInt(self, s: str) -> int:
         #make a hash map ?
         #or using switch or if to convert roman to integer?
+        #from left to right , largest to smallest one
+        #if left one is smaller than right one than substract from right one to left one and get number
         return
