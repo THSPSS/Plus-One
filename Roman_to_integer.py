@@ -41,6 +41,12 @@ class Solution:
         }
 
         print(f"hash_map[0] {hash_map['I']}");
+        result = 0
+        for i in range(len(s)):
+            if i != len(s)-1 and hash_map[s[i]] < hash_map[s[i+1]]:
+                result += hash_map[s[i+1]] - hash_map[s[i]]
+            else:
+                result += hash_map[s[i]]
 
         return
 
