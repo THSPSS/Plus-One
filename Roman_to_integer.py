@@ -48,9 +48,9 @@ class Solution:
             else:
                 result += hash_map[s[i]]
 
-        return
+        return result
 
 
 
 solution = Solution()
-solution.romanToInt("IVX")
+print(solution.romanToInt("XIV"))
