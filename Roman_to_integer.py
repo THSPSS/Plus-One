@@ -44,7 +44,8 @@ class Solution:
         result = 0
         for i in range(len(s)):
             if i != len(s)-1 and hash_map[s[i]] < hash_map[s[i+1]]:
-                result += hash_map[s[i+1]] - hash_map[s[i]]
+                #result += hash_map[s[i+1]] - hash_map[s[i]]
+                result -= hash_map[s[i]]
             else:
                 result += hash_map[s[i]]
 
@@ -53,4 +54,5 @@ class Solution:
 
 
 solution = Solution()
-print(solution.romanToInt("XIV"))
+print(solution.romanToInt("XIV")) #14
+print(solution.romanToInt("CXL")) #140
