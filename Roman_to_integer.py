@@ -40,7 +40,6 @@ class Solution:
             "M": 1000,
         }
 
-        print(f"hash_map[0] {hash_map['I']}");
         result = 0
         for i in range(len(s)):
             if i != len(s)-1 and hash_map[s[i]] < hash_map[s[i+1]]:
@@ -56,3 +55,6 @@ class Solution:
 solution = Solution()
 print(solution.romanToInt("XIV")) #14
 print(solution.romanToInt("CXL")) #140
+print(solution.romanToInt("III")) #3
+print(solution.romanToInt("LVIII")) #58
+print(solution.romanToInt("MCMXCIV")) #1994
