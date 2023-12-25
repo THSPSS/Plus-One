@@ -9,3 +9,6 @@ Roman numerals are usually written largest to smallest from left to right. Howev
 
 class Solution:
     def intToRoman(self, num: int) -> str:
+        #check number
+        #check if number is smaller than other
+        return
