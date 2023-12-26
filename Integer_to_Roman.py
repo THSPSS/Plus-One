@@ -25,6 +25,15 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 class Solution:
     def intToRoman(self, num: int) -> str:
+        hash_map = {
+             1 :  "I",
+             5 :  "V",
+             10:  "X",
+             50:  "L",
+             100: "C",
+             500: "D",
+            1000: "M",
+        }
         #check number
         #check if number is smaller than other
         #each number divide with each section
