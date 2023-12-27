@@ -37,4 +37,6 @@ class Solution:
         #check number
         #check if number is smaller than other
         #each number divide with each section
+        #divde number with each digit
+        #1000  , 500 , 100 , 50 , 10 , 5 , 1
         return
