@@ -24,6 +24,8 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 
 
 class Solution:
+    #Constratins number
+    #1 <= num <= 3999
     def intToRoman(self, num: int) -> str:
         hash_map = {
              1 :  "I",
@@ -39,4 +41,6 @@ class Solution:
         #each number divide with each section
         #divde number with each digit
         #1000  , 500 , 100 , 50 , 10 , 5 , 1
+
+
         return
