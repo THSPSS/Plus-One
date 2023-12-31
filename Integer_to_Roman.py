@@ -41,6 +41,9 @@ class Solution:
         #each number divide with each section
         #divde number with each digit
         #1000  , 500 , 100 , 50 , 10 , 5 , 1
+        count = 0
+        for i in range(len(num)):
+            count += 1
 
 
         return
