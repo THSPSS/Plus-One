@@ -44,6 +44,7 @@ class Solution:
         count = 0
         for i in range(len(num)):
             count += 1
+            num / 1000
 
 
         return
