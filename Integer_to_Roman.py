@@ -45,6 +45,7 @@ class Solution:
         for i in range(len(num)):
             count += 1
             print(num / 1000)
+            #multiply "M" three times
 
 
         return
