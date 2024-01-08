@@ -48,6 +48,7 @@ class Solution:
             result = num / 1 * count
             print(result)
             #multiply "M" three times
+        print(f"count {count}")
 
 
 
