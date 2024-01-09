@@ -48,6 +48,7 @@ class Solution:
             result = num / 1 * count
             print(result)
             #multiply "M" three times
+            #make number with each value like 80 and 5
         print(f"count {count}")
 
 
