@@ -52,6 +52,7 @@ class Solution:
             #using dividing
         print(f"count {count}")
         print(f"count {count}")
+        print(f"count {count}")
 
         return result
 
