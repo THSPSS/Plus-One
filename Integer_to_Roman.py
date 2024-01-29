@@ -47,9 +47,11 @@ class Solution:
             print(num / 1000)
             result = num / 1 * count
             print(result)
+
             #multiply "M" three times
             #make number with each value like 80 and 5
             #using dividing
+        print(f"count {count}")
         print(f"count {count}")
         print(f"count {count}")
         print(f"count {count}")
