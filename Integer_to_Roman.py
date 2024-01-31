@@ -52,6 +52,8 @@ class Solution:
             #make number with each value like 80 and 5
             #using dividing
         print(f"count {count}")
+        print(f"count {count}")
+
 
         return result
 
